@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            height: 300px;
+            display: flex;
+            flex-flow: row wrap;
+            /*
+            flex-flow é um shorthand para flex-direction e flex-wrap
+            */
+            justify-content: flex-start;
+            align-content: stretch;
+            /*align-itens = nowrap / align-content = wrap*/
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            /*flex: auto;*/
+        }
+
+        /*
+        Flexible boxes:
+        O comportamento "display: flex" é dado ao container "pai" para que os itens dentro dele fiquem flexíveis, independente do tamanho da janela de visualização
+
+        A resposta "flex: auto" é dada aos itens, obrigando ocupar 100% do espaço do conteiner.
+        */
+
+        /*
+        Direções e eixos:
+        O "flex-directions" declara a orientação/direção para os itens seguir, sendo o "row", lido da esquerda para a direita, "row-reverse", da direita pra esquerda, "column", de cima pra baixo e "column-reverse" que é de baixo pra cima.
+
+        Os eixos por sua vez, são mostrados dependendo da direção, por exemplo, no formato "row", existe o "eixo principal", chamado de "main-axis", traçado no meio do conteiner, sendo lido, da esquerda pra direita e o "eixo cruzado", chamado de "cross axis", traçando o conteiner de cima para baixo.
+
+        Essas duas orientações de eixos geram mais 4 pontos. Para o "main-axis", temos o "main-start" e o "main-end" e para o "croos-axis", temos o "cross-start" e o "cross-end".
+        */
+
+        /*
+        Empacotamento dos itens:
+        Usando a propriedade "flex-wrap" no conteiner pai, podemos atribuir alguns valores a ele, sendo por padrão, o "flex-wrap: nowrap". Esse valor, faz com que os itens se encolham a ponto de caber OBRIGATÓRIAMENTE dentro do conteiner, sendo que, esse encolhimento vai depender do conteúdo que esta no item.
+
+        O valor "flex-wrap: wrap" faz com que sempre o último item "quebre" no sentido do eixo cruzado, o cross-axis levando em consideração o "flex-directions". E o "flex-wrap: wrap-reverse" faz o último item "quebre" no sentido OPOSTO do cross-axis.
+
+        Alinhamento nos eixos:
+        Depois de declarar a direção, o formato de empacotamento, é hora de organizar os itens dentro do conteiner. Para isso, é necessário usar duas sintaxe, o "justify-content" e o "align-items".
+
+        Justify-content
+        O "justify-content" alinha os itens no eixo principal (main-axis) do conteiner e pode receber alguns valores: "flex-start", segura o primeiro item no início do main-axis "flex-end", segura o último item no final do main-axis, "center", calcula espaços iguais no main-start e no main-end deixando os itens alinhados no centro.
+        Além desses valores mais conhecidos. Temos os valores de espacamento. "space-between" segura o primeiro item no main-start, o último item no main-end e cria espaços iguais entre os itens, "space-evenly" cria espaços iguais para todos os itens sem segura-los nas extremidades, "space-around" cria espaçoespecial para cada itens, fazendo com que o espaço do main-start e do main-end sejam iguais, porém, o espaço entre cada item sejam diferentes.
+
+        Align-items e Align-content
+        O "align-items" alinha os itens no sentido do eixo cruzado (cross-axis) do conteiner. Por sua vez, pode receber o "flex-start", "flex-end", "center" e por padrão, o valor "stretch", que faz com que os itens se estiquem para ocupar toda a altura do conteiner. O "align-content" possui as mesmas característica do "align-items", alinhando no "cross-axis", porém, sua função é para os elementos com o flex-wrap, além disso, essa propriedade pode receber os mesmos valores do "justify-content" ("flex-start", "flex-end", "center", "space-between", "space-evenly", "space-around", além do seu valor padrão "stretch"
+        */
+    </style>
+    <title>Flexible Box</title>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">Exemplo de item A</div>
+        <div class="item">Exemplo de item B</div>
+        <div class="item">Exemplo de item C</div>
+        <div class="item">Exemplo de item D</div>
+        <div class="item">Exemplo de item E</div>
+        <div class="item">Exemplo de item F</div>
+        <div class="item">Exemplo de item G</div>
+    </div>
+</body>
+</html>

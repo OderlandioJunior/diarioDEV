@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 550px) {
+    header {
+        display: flex;
+        flex-flow: row wrap; /* Conteiner pai em formato de linha tendo como opção uma quebra, para que seu conteúdo fique em formato de cascata */
+
+        justify-content: center;
+        align-items: center
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap; /* Distribui os itens individualmente em formato de coluna*/
+        flex: auto;
+
+        justify-content: center;
+        align-items: center
+    }
+
+    a {
+        align-self: stretch;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:670px) {
+    header {
+        display: flex;
+        flex-flow: row nowrap; /* Conteiner pai em formato de linha com obrigação de não quebrar na falta de tamanho */
+        justify-content: space-between; /* Segura o primeiro e o ultimo no main-axis e depois distribui espaços iguais entre os itens */
+        align-items: flex-start;
+    }
+}

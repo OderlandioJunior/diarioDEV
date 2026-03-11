@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5em;
+        }
+        div.flex {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            align-content: center;
+
+        }
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            width: 110px;
+        }
+
+        th,td {
+            border: 2px solid black;
+            padding: 5px;
+        }
+    </style>
+    <title>Propriedades para Grid Layout</title>
+</head>
+<body>
+    <h1>Propriedades para o container</h1>
+    <h2>Display: Grid</h2>
+    <p>Partindo para o CSS, é necessário saber qual container será responsável para ter o comportamento de grade. Assim, declaramos "<strong>display:grid</strong>" juntamente com "<strong>grid-template-columns</strong>" e o "<strong>grid-template-rows</strong>" e finalizando com o "<strong>gap</strong>" para criar espaçamento dentro dos itens</p>
+
+    <h3>Abrindo um DISPLAY:GRID</h3>
+    <p>Ao fazer a declaração do "display:grid", no primeiro momento, não haverá nenhuma mudança, pois o comportamento automático dessa declaração é criar um container de UMA coluna e VÁRIAS linhas. Para contornar isso, usamos então o "grid-template-columns" para transformar o GRID e ter mais de uma coluna, o preenchimento dessa propriedade pode ser dito através de "auto", que por sua vez, o dizer "grid-template-columns: auto auto;" estamos criando 2 colunas para o grid, e dizer "grid-template-columns: auto auto auto;" cria-se 3 colunas com tamanhos exatamente iguais. Falando sobre o "grid-template-rows", ele é responsável por configurar as linhas horizontais do grid</p>
+
+    <p>Porém, definindo dessa forma, ocorrerá limitações na qual se houver acréscimo de mais itens dentro do container, os mesmos quebrarão o layout de acordo com o tamanho AUTOMÁTICO do navegador. Para isso, temos as propriedades "<strong>grid-auto-row</strong>" e "<strong>grid-auto-column</strong>" que definem respectivamente o tamanho que esse(s) novo(s) item(s) terá(ão).</p>
+
+    <h2>Propriedades para mover conteúdo</h2>
+    <p>Outras propriedades que também podem ser aplicadas ao container são: "<strong>align-items</strong>, <strong>justify-items</strong>, <strong>align-content</strong> e <strong>justify-content</strong>". De maneira geral, as propriedades com "items" são responsáveis por modificar somente os itens e as propriedades com "content" são responsáveis por modificar todo o conjunto dos itens em si. "align" significa que estamos modificando no sentido vertical e "justify" no sentido horizontal.</p>
+
+    <h2>Valores para as propriedades</h2>
+    <p>Indo para um conceito mais apronfundado dessas propriedades, temos os valores que elas podem receber individualmente:</p>
+    <div class="flex">
+        <table>
+            <tr>
+                <th rowspan="4">Align-Items e Justify-Items</th>
+                <td>stretch, valor padrão</td>
+            </tr>
+            <tr>
+                <td>start</td>
+            </tr>
+            <tr>
+                <td>center</td>
+            </tr>
+            <tr>
+                <td>end</td>
+            </tr>
+        </table>
+    </div>
+    <p>O valor "<strong>stretch</strong>" faz com que os itens se estiquem para preencher todo o espaço das grades, "<strong>start</strong>" vai prender os itens no começo da direção, ou seja, em cima para align e na esquerda para justify, "<strong>center</strong>" prende ao meio e "<strong>end</strong>" no final das grades geradas pelas linhas, sendo respectivamente em baixo para align e na direita para justify</p>
+    <div class="flex">
+        <table>
+            <tr>
+                <th rowspan="5">Align-Content e Justify-Content</th>
+                <td>stretch, valor padrão</td>
+            </tr>
+            <tr>
+                <td>start</td>
+            </tr>
+            <tr>
+                <td>center</td>
+            </tr>
+            <tr>
+                <td>end</td>
+            </tr>
+            <tr>
+                <td>space-between, evenly e around</td>
+            </tr>
+        </table>
+    </div>
+    <p>Para as propriedades "content", o conceito é parecido com as propriedades "items" já que temos os valores "start", "center" e "end" para as devidas orientações, sendo elas align para vertical e justify para horizontal, porém, o diferencial dessas propriedades "content" é justamente os valores "<strong>space-between</strong>", "<strong>space-evenly</strong>" e "<strong>space-around</strong>". O "space-between" vai prender o primeiro item no "start" e o último item no "end" e distribuir o espaço restante entre os conteúdos dentro do container, o "space-evenly" vai criar espaçamento IGUAL entre os conteúdos dentro do container e por fim, o "space-around" vai determinar espaço em volta do conteúdo</p>
+
+    <h2>ShortHands</h2>
+    <p>Para encurtar a quantidade de linhas de código, temos as seguintes shorthands: "<strong>grid-template</strong>" que configura o "grid-template-row" e logo depois o "grid-template-column". Para os itens, o "<strong>place-items</strong>" que configura o "align-items" e o "justify-items" e para o container, "<strong>place-content</strong>", que mantém a mesma ordem de direção, "align-content" e "justify-content, <strong>repeat</strong> para valores repetidos, por exeplo na declaração com valores "auto auto auto", substituímos para "repeat (3, auto)"</p>
+
+    <h2>Nova unidade de medida</h2>
+    <p>No contexto sobre GridLayout, temos unidade fracionada, chamada de <strong>fr</strong>, nela, podemos delimitar ainda melhor o espaçamento do container. Com tudo, podemos encontrar casos com unidades de medidas misturadas, tal qual <strong>px, porcentagem e fração</strong> e para esses casos, devemos seguir as seguintes regras: primeiro calculamos unidades fixas como px, depois, a porcentagem como um valor inteiro que foi declarado ao tamanho total do container e por fim, a unidade fracionada, já que ela resulta num valor que <strong>RESTOU</strong> das outras medidas.</p>
+    <p>Por exemplo um containar com 1500px de largura tendo grid-template-columns: 100px 20% 1fr 1 fr, temos um resultado de um item com 100px, um item com 20% de 1500 que é igual a 300px e dois itens fracionados resultando em 550px cada, pois já foram ocupados 400px das outras unidades.</p>
+
+    <h1>Propriedades para itens</h1>
+    <h2>Grid rows e Grid Column</h2>
+    <p>As propriedades <strong>grid-row-start</strong>, <strong>grid-collumn-start</strong>, <strong>grid-row-end</strong> e <strong>grid-collumn-end</strong> são as responsáveis para mapear as linhas do grid-layout e então fazer o tamanho do item. Essas propriedades por sua vez, são aplicadas em cada item para terem seus tamanhos individuais.</p>
+
+    <h2>Span</h2>
+    <p>Esse parametro é dito como valor também para as tags grid rows e grid column para mostrar a <strong>expansão</strong> que o item teve dentro do grid.</p>
+    <p>Por exemplo um item que começa na linha 1 e termina na linha 3, ele teve um <strong>span</strong> 2</p>
+    
+    <h2>ShortHands</h2>
+    <p>A simplificação para definir uma área no grid pode ser feita de duas maneiras, a primeira usando <strong>grid-rows</strong> e <strong>grid-column</strong> e a segunda é com a <strong>grid-area</strong> que tem como padrão o valores do início: <strong>grid-row-start</strong> e <strong>grid-collumn-start</strong> e do final: <strong>grid-row-end</strong> e <strong>grid-collumn-end</strong></p>
+</body>
+</html>

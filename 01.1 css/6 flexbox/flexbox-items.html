@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos flexbox</title>
+</head>
+<body>
+    <h1>Propriedades para elementos</h1>
+    <p>No assunto sobre elementos flexíveis, temos o <code>order</code>, <code>align-self</code> e o trio flex (<code>flex-basis</code>, <code>flex-shrink</code> e <code>flex-grow</code>).</p>
+
+    <h2>Order</h2>
+    <p>Assimilando um <code>ID</code> para um elemento HTML, conseguimos mudar sua posição de exibição no <strong>eixo principal (main-axis)</strong> nas CSS, diferente da pseudo-classe <code>::after</code> que cria um conteúdo "virtual" em um conteúdo já existente.</p>
+    <h3>Forma de uso</h3>
+    <p>Essa propriedade  pode receber valores numéricos e possui como valor padrão o número 0, onde são mostrados respectivamente na linha de exibição por exemplo <code>flex-flow: row wrap</code> de acordo com os <strong>Numeros Inteiros</strong>, sendo, os números negativos mostrando os primeiros itens, seguindo logo após o 0 e assim finalizando a lista de exibição com os números positivos. Uma <strong>OBSERVAÇÃO</strong> é que, dado o valor 0 a dois elementos, a exibição será de acordo às suas respectivas posições no documento <code>HTML</code>.</p>
+
+    <h2>Align-Self</h2>
+    <p>O <code>align-self</code> funciona alinhando o itens no <strong>eixo cruzado (cross-axis)</strong>, porém, diferente do <code>align-items</code> e <code>align-content</code>, essa propriedade atua de forma individual para os itens.</p>
+
+    <h3>Forma de uso</h3>
+    <p>Os valores para essa propriedade são: 
+        <dl>
+            <dt>auto</dt>
+                <dd>Herda a caracteristica do conteiner</dd>
+            <dt>flex-start</dt>
+                <dd>Alinha o item perto do cross-start</dd>
+            <dt>flex-end</dt>
+                <dd>Alinha o item perto do cross-end</dd>
+            <dt>center</dt>
+                <dd>Calcula automaticamente o centro do conteiner e alinha o item</dd>
+            <dt>stretch</dt>
+                <dd>Estica o item para ocupar 100% da altura do conteiner</dd>
+        </dl>
+
+        <h2>Flex-basis, flex-shrink e flex-grow</h2>
+        <p>Partindo para o trio flex, temos o <code>flex-basis</code> dita o tamanho máximo que o elemento terá alinhado com o <strong>main-axis</strong>, ou seja, esse tamanho poderá ser a altura ou a largura. O <code>flex-shrink</code> dita se o elemento poderá encolher e o <code>flex-grow</code> se pode crescer dentro do container</p>
+
+        <h3>Formas de usos</h3>
+        <p>O trio flex aceita valores númericos e pode ser simplificado com um shorthand <code>flex</code> nas CSS. Esse shorthand por sua vez é respondido respectivamente por <code>flex-grow</code> e o <code>flex-shrink</code> com valores com <strong>0</strong> para <strong>não</strong> e <strong>1</strong> para <strong>sim</strong> mas não são exatamente propriedades binárias e finalizando com <code>flex-basis</code> com unidades de medidas.</p>
+
+        <p>Sobre o <code>flex-basis</code>, seu valor padrão é <strong>auto</strong>, esse valor faz com que os itens aumente o tamanho  para comportar seu contéudo individual. Porém, adicionando um valor numérico à essa propriedade, os itens terão o respectivo tamanho até que todos caibam dentro do conteiner, e, a partir do momento em que não haja mais espaço para todos, eles irão acompanhar o <code>flex-flow</code>, reduzindo seu tamanho  e quebrando o conteúdo ou levar o último item para o <strong>cross-axis</strong></p> 
+        <p>O <code>flex-shrink</code> possui como padrão o valor <strong>1</strong> e o <code>flex-grow</code> como <strong>0</strong>. 
+        <br>Uma <strong>OBSERVAÇÃO</strong> para os valores de <code>flex-shrink</code> e <code>flex-grow</code> é que, dado o valor 1 para um elemento e o valor 2 para outro, os elementos irão calcular automaticamente o espaço do conteiner e vão usar o valor maior como multiplicador para encontrar uma distribuição. <em>Por exemplo: item A com <code>flex-grow</code> de <strong>1</strong> e item B com <code>flex-grow</code> de <strong>3</strong> em um conteiner, o item B terá 3x mais tamanho ao crescer a janela do que o item A. Da mesma forma, funciona com <code>flex-shrink</code></em>.</p>
+
+        <p>Voltando a falar do shorthand, é possível simplificar ainda mais com valores "únicos", por exemplo: <code>flex: 0 1 auto</code> pode ser escrito como <code>flex: initial</code> pois são todos os valores padrões das propriedades em formas separadas // <code>flex: 0 0 auto</code> significa que o item é totalmente não flexível, corespondido como <code>flex:none</code> // <code>flex: 1 1 auto</code> dá ao item livre movimento, podendo crescer e diminuir e ter seu limite natural por conta do conteúdo, igualando seu resultado a um <code>flex: auto</code> // Por fim, temos o shorthand com apenas um valor, por exemplo: <code>flex: 3</code>, isso significa que será aplicada a mudança somente no <code>flex-grow</code>, seguindo com a ordem padrão das outras propriedades.</p>
+</body>
+</html>

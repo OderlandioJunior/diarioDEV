@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
 /* Configuração para o cabeçalho */
 header {
@@ -42,7 +43,7 @@ header section span {
 }
 
 header menu {
-    width: 100%;
+    margin-left: auto;
     display: flex;
     flex-flow: row-reverse nowrap;
     align-items: baseline;
@@ -59,7 +60,7 @@ header nav {
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
-    transform: translateX(3px);
+    transform: translateX(10px);
     transition: all .5s ease-out;
 }
 
@@ -88,9 +89,12 @@ header nav a:hover {
     color: blueviolet;
 }
 /* Fim da configuração para o cabeçalho */
+
 /* Configuração para o conteúdo */
 
+
 /* Fim da configuração para o conteúdo */
+
 /* Configuração para o rodapé */
 footer {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

@@ -14,8 +14,8 @@
             <h1>Oderlândio Júnior</h1>
             <span>Desenvolvedor WEB</span>
         </section>
-    <!--<menu>
-            <i class="fa-solid fa-bars" onclick="clickMenu()"></i>-->
+        <menu>
+            <i class="fa-solid fa-bars" onclick="clickMenu()"></i>
             <nav id="itens">
                 <ul>
                     <li><a href="#aprendiz"><i class="fa-solid fa-book"></i> Aprendizado</a></li>
@@ -140,7 +140,6 @@
     </footer>
 
     <script>
-    /*
         function clickMenu() {
             const menuItens = document.getElementById('itens');
             menuItens.classList.toggle('mostrar');
@@ -152,8 +151,7 @@
                 artigo.classList.toggle('mostrar');
             });
         });
-    */
-        const navLinks = document.querySelectorAll('nav ul li a'); // Seleciona seus links do menu
+        const navLinks = document.querySelectorAll('nav ul li a');
         navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -162,7 +160,6 @@
         const target = document.querySelector(id);
             if (target) {
             const headerHeight = document.querySelector('header').offsetHeight;
-            // O '- 20' serve para dar um respiro (margem) entre o header e o título
             const targetPosition = target.offsetTop - headerHeight - 20;
                 window.scrollTo ({
                 top: targetPosition,

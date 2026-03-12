@@ -6,120 +6,135 @@
 }
 
 body {
+    height: 100vh;
     background-color: black;
     color: white;
-    height: 100%;
-    width: 100%;
 }
-
 /* Configuração para o cabeçalho */
 header {
-    /*display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: center;*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
     position: sticky;
     top: 0;
     z-index: 1;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    padding: 0 10px;
-    max-height: 500px;
+    padding: 10px;
 
     background-color: black;
     border-bottom: 1px solid blueviolet;
-    box-shadow: 0px 0px 20px 5px blueviolet;
+    box-shadow: 0px 0px 20px 2px blueviolet;
 }
+
+header section h1 {
+    font-size: 1.9em;
+}
+
 
 header section span {
     padding-left: 5px;
-    border-left: 5px solid blueviolet;
+    border-left: 3px solid blueviolet;
 }
-/*
-menu {
+
+header menu {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row-reverse wrap;
     justify-content: center;
     align-items: center;
 
     cursor: pointer;
+    background-color: black;
 }
-menu > i {
+
+header menu > i {
     font-size: 1.5em;
-
     padding: 5px;
-
     border: 1px solid blueviolet;
     border-radius: 5px;
 }
-nav {
-    max-width: max-content;
-    padding: 10px;
-    white-space: nowrap
-    background-color: black;
+
+header nav {
+    padding: 8px;
+    white-space: nowrap;
     border: 1px solid blueviolet;
     border-radius: 15px;
-    /*opacity: 0;
+    opacity: 0;
     visibility: hidden;
     overflow: hidden;
-    transform: translateX(10px);
+    transform: translateX(3px);
     transition: all .5s ease-out;
-
 }
-nav.mostrar {
+
+header nav.mostrar {
     max-width: max-content;
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
 }
-*/
-nav {
-    margin-top: 1rem;
-}
 
-ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-content: flex-start;
-    padding: 0.8rem 0;
-
+header nav ul {
     list-style-type: none;
 }
 
-li {}
-
-a {
-    color: white;
-    font-size: 1em;
-    font-weight: normal;
+header nav a {
     text-decoration: none;
-
-    padding: 5px;
-    border-bottom: 2px solid blueviolet;
+    font-size: 1em;
+    color: white;
 }
 
-a:hover {
+header nav a:hover {
     color: blueviolet;
 }
 /* Fim da configuração para o cabeçalho */
 
-/* Fim da configuração para o conteúdo */
+/* Configuração do conteúdo */
+main {
+    margin: 20px 0;
+    padding: 15px;
+}
+
+section#intro {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1em;
+    text-align: justify;
+    text-indent: 1em;
+}
+
+section#intro h2, h3 {
+    font-weight: normal;
+    text-align: center;
+}
+
+section#intro article {
+    margin: 20px 0;
+    line-height: 1.5rem;
+}
+
+section#intro article p {
+    margin: 1em 0;
+}
+/* Fim da configuração do conteúdo */
 
 /* Configuração para o rodapé */
 footer {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-
     padding: 5px;
-
     border-top: 1px solid blueviolet;
-
     box-shadow: 0px 0px 20px 5px blueviolet;
 }
 
-footer nav {
-    display: inline-block;
+footer a {
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+}
+
+footer a:hover {
+    color: blueviolet;
 }
 /* Fim da configuração para o rodapé */

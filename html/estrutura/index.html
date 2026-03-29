@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/1cf26eb200.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../style.css">
     <title>Estrutura HTML</title>
 </head>
 <body>
     <header>
-        <section>
-            <h1>Oderlândio Júnior</h1>
-            <span>Desenvolvedor WEB</span>
-        </section>
-        <menu>
-        <i class="fa-solid fa-bars" onclick="clickMenu()"></i>
-        <nav id="itens">
-            <ul>
-                <li><a href="../../index.html" target="_parent" rel="prev"><i class="fa-regular fa-house"></i> Página principal</a></li>
-                <li><a href="../links/index.html" target="_self" rel="next">Próximo artigo <i class="fa-regular fa-circle-right"></i></a></li>
-            </ul>
-        </menu>
+    <nav>
+        <ul>
+            <li><a href="../../index.html" target="" rel="">Página principal</a></li>
+            <li><a href="../links/index.html" target="" rel="">Próximo artigo</a></li>
+            <!-- i > bars -->
+            <li><a href="#perfil" target="_self" rel="">Sobre mim</a></li>
+        </ul>
+    </nav>
+    <h1>Diário DEV</h1>
+    <span>Por Oderlândio Júnior</span>
     </header>
     <main>
-        <article>
+        <section>
             <h2>I. Tipologias de Arquivos e a Anatomia Digital na Programação</h2>
             <p>Para um desenvolvedor, compreender a natureza dos arquivos com os quais interage é o primeiro passo para o domínio do ambiente de desenvolvimento. Uma extensão de arquivo não é apenas um rótulo; ela sinaliza ao sistema operacional e às aplicações o formato interno dos dados e o interpretador necessário para processá-los. Mudar a extensão de um arquivo manualmente (por exemplo, de .jpg para .js) não altera a organização interna dos seus bits, o que resultará em erro de execução. No contexto do Diário DEV, é essencial diferenciar entre formatos binários, formatos de marcação e scripts.</p>
             <h3>O Paradigma da Transição: .doc vs.docx</h3>
@@ -36,13 +33,12 @@
             <p>Embora não tenha sido o foco de documentos legados, o formato .webp é o padrão de ouro no roadmap de 2025. Desenvolvido pelo Google, o WebP oferece compressão superior tanto para imagens com perda quanto sem perda. Frequentemente, uma imagem WebP é 25% a 34% menor que um JPEG equivalente, mantendo a mesma qualidade visual e suportando transparência e animações. O uso de WebP impacta diretamente o Core Web Vital conhecido como Largest Contentful Paint (LCP), uma métrica de velocidade de carregamento essencial para SEO.</p>
             <h3>Arquivos de Lógica e Intercâmbio de Dados:.js e.json</h3>
             <p>No desenvolvimento web, o arquivo .js contém o código-fonte em JavaScript, que é interpretado pelo motor (engine) do navegador para adicionar comportamento dinâmico às páginas estáticas. Complementarmente, o formato .json (JavaScript Object Notation) consolidou-se como o padrão universal para a troca de dados entre front-end e back-end. Sua sintaxe baseada em texto é leve, legível por humanos e facilmente processada por quase todas as linguagens de programação modernas.</p>
-        </article>
-
-        <article>
+        </section>
+        <section>
             <h2>II. Anatomia e Estrutura de um Documento HTML5</h2>
             <p>A construção de um site resiliente e acessível começa pela compreensão minuciosa do esqueleto HTML. Um documento HTML5 não é apenas uma sequência de tags; é uma hierarquia de objetos que formam o Document Object Model (DOM). A omissão ou o uso incorreto de tags fundamentais pode levar ao "Quirks Mode", onde o navegador renderiza a página de forma imprevisível para manter compatibilidade com tecnologias obsoletas da década de 90.</p>
-            <div class="estrutura">
-                <img src="image/estrutura-html.PNG" alt="">
+            <div class="image">
+                <img src="assets/estrutura-html.PNG" alt="">
             </div>
             <h3>O Preâmbulo Obrigatório: <code>!DOCTYPE html</code></h3>
             <p>A primeira linha de qualquer documento moderno deve ser obrigatoriamente <code>!DOCTYPE html</code>. Tecnicamente, esta instrução não é uma tag HTML, mas uma declaração de tipo de documento (DTD). Ela informa ao navegador que o arquivo segue os padrões vigentes do HTML5, garantindo que o motor de renderização utilize o "Standards Mode" para interpretar o layout e os estilos CSS com precisão.</p>
@@ -66,9 +62,8 @@
             </ol>
             <h3>O Corpo e a Experiência do Usuário: <code>body</code></h3>
             <p>O elemento <code>body</code> contém toda a parte visível do site: textos, imagens, botões, formulários e links. Enquanto o <code>head</code> lida com as instruções para o navegador, o <code>body</code> é o palco onde o conteúdo é estruturado e apresentado ao usuário final. É dentro do corpo que o desenvolvedor aplica a semântica e organiza o layout através do modelo de caixas.</p>
-        </article>
-
-        <article>
+        </section>
+        <section>
             <h2>III. O Modelo de Caixas (Box Model) e o Fluxo de Documentos</h2>
             <p>No desenvolvimento frontend, entender que "tudo é uma caixa" é a chave para o domínio do layout. Mesmo que um elemento pareça circular no navegador, ele reside dentro de uma fronteira retangular definida pelo CSS Box Model. No entanto, antes de aplicar estilos complexos, é preciso compreender como o HTML organiza essas caixas por padrão através do "Normal Flow" (Fluxo Normal).</p>
             <h3>Componentes da Caixa no Contexto HTML</h3>
@@ -86,9 +81,8 @@
                 <li><strong>Inline (Em Linha)</strong>: Elementos como <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code> e <code>&lt;em&gt;</code> ocupam apenas a largura necessária para envolver seu conteúdo. Eles não quebram a linha e fluem horizontalmente junto com o texto vizinho. Um detalhe técnico fundamental: elementos inline puros não aceitam propriedades de largura ou altura e possuem limitações na aplicação de margens verticais.</li>
                 <li><strong>Inline-Block</strong>: Este é um estado híbrido. O elemento flui horizontalmente como se fosse texto, mas aceita dimensões de largura e altura como se fosse um bloco. É ideal para botões e itens de menu</li>
             </ul>
-        </article>
-
-        <article>
+        </section>
+        <section>
             <h2>IV. Títulos como Elementos Block-level</h2>
             <p>Tecnicamente, todos os elementos de cabeçalho (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>) são, por padrão, block-level elements. Isso significa que, no contexto do Box Model, eles possuem comportamentos específicos:</p>
             <ul>
@@ -119,9 +113,8 @@
                 <li>Foco em Acessibilidade: Leitores de tela permitem que usuários "saltem" entre cabeçalhos. Se a hierarquia estiver correta, uma pessoa com deficiência visual consegue navegar pelo seu blog tão rápido quanto alguém que escaneia a página visualmente.</li>
                 <li>SEO: O Google dá mais peso às palavras-chave que aparecem no <code>&lt;h1&gt;</code> e <code>&lt;h2&gt;</code>, pois elas indicam do que o conteúdo realmente trata.</li>
             </ul>
-        </article>
-
-        <article>
+        </section>
+        <section>
             <h2>V. Arquitetura Semântica e Regras de Aninhamento</h2>
             <p>A semântica no HTML5 representa a evolução da web de um conjunto de documentos visuais para uma teia de dados compreensíveis por máquinas. Utilizar tags semânticas não é uma questão estética, mas funcional: elas permitem que tecnologias assistivas (leitores de tela) e algoritmos de busca (Googlebot) entendam a hierarquia e a importância de cada parte do conteúdo.</p>
             <h3>A Pirâmide Semântica: Marcos de Navegação</h3>
@@ -140,25 +133,16 @@
                 <li>O Caso Especial do Anchor (<code>&lt;a&gt;</code>): Historicamente, links eram puramente inline. No HTML5, a tag <code>&lt;a&gt;</code> pode envolver blocos inteiros, como um article ou uma div, permitindo que toda uma área (com título, imagem e texto) se torne clicável. Contudo, é proibido aninhar um link dentro de outro link.</li>
                 <li>Listas: Os itens de lista (<code>&lt;li&gt;</code>) só podem ser filhos diretos de uma lista ordenada (<code>&lt;ol&gt;</code>) ou desordenada (<code>&lt;ul&gt;</code>). Aninhar uma <code>&lt;div&gt;</code> diretamente como filha de um <code>&lt;ul&gt;</code> é uma violação estrutural grave.</li>
             </ol>
-        </article>
-
-        <article>
+        </section>
+        <section>
             <h2>VI. A Transição para o CSS e JS</h2>
             <p>No roadmap do blog, após documentar a estrutura HTML, o próximo passo natural é a introdução do CSS para dar vida às "caixas" criadas. Isso inclui o estudo de Flexbox e Grid para o posicionamento avançado de blocos, além de variáveis CSS para manter o código limpo. Em seguida, o JavaScript entra para manipular esses elementos do DOM em tempo real, utilizando APIs modernas para buscar dados dinâmicos e atualizar a interface sem recarregar a página.</p>
             <p>A documentação desses processos no Diário DEV serve como um registro da evolução da lógica de programação. Ao explicar por que escolheu um <code>&lt;article&gt;</code> em vez de uma <code>&lt;div&gt;</code>, ou como um <code>.webp</code> otimizou a velocidade do site, o desenvolvedor demonstra um pensamento crítico.</p>
-        </article>
+        </section>
     </main>
     <footer>
-        <a href="#" target="_blank" rel="follow"><i class="fa-brands fa-github"></i> Github</a>
-        <a href="#" target="_blank" rel="follow"><i class="fa-regular fa-envelope"></i> E-mail</a>
-        <a href="#" target="_blank" rel="follow"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        <p>Estou desenvolvendo esse blog no intuito de documentar minha jornada</p>
+    GitHub // E-mail // LinkedIn
+    <p>Este blog tem como objetivo principal demonstrar minhas competências em desenvolvimento web, <strong>possuindo caráter</strong> estritamente <strong>acadêmico</strong> e <strong>sem fins lucrativos</strong>.</p>
     </footer>
-    <script>
-        function clickMenu() {
-            const menuItens = document.getElementById('itens');
-            menuItens.classList.toggle('mostrar');
-        }
-    </script>
 </body>
 </html>

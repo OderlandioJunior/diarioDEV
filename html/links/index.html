@@ -3,38 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/1cf26eb200.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../style.css">
     <title>Conexões HTML</title>
 </head>
 <body>
     <header>
-        <section>
-            <h1>Oderlândio Júnior</h1>
-            <span>Desenvolvedor WEB</span>
-        </section>
-        <menu>
-        <i class="fa-solid fa-bars" onclick="clickMenu()"></i>
-        <nav id="itens">
-            <ul>
-                <li><a href="../../index.html" target="_parent" rel="prev"><i class="fa-regular fa-house"></i> Página principal</a></li>
-                <li><a href="../estrutura/index.html" target="_parent" rel="prev"><i class="fa-regular fa-circle-left"></i> Artigo anterior</a></li>
-                <li><a href="#" target="_self" rel="next">Próximo artigo <i class="fa-regular fa-circle-right"></i></a></li>
-            </ul>
-        </menu>
+    <nav>
+        <ul>
+            <li><a href="../../index.html" target="" rel="">Página principal</a></li>
+            <li><a href="../estrutura/index.html" target="" rel="">Artigo anterior</a></li>
+            <!-- i > bars -->
+            <li><a href="../listas/index.html" target="" rel="">Próximo artigo</a></li>
+        </ul>
+    </nav>
+    <h1>Diário DEV</h1>
+    <span>Por Oderlândio Júnior</span>
     </header>
-    
+    <main>
+        <section>
+            <h2>O Guia Definitivo da Tag de Âncora (&lt;a&gt;)</h2>
+            <p>A tag &lt;a&gt; (de anchor) é, sem dúvida, a espinha dorsal da World Wide Web. É ela que permite a navegação entre páginas, transformando documentos isolados em uma rede conectada.</p>
+            <h2>I. Entendendo a Anatomia: Atributos (Parâmetros) e Valores</h2>
+            <p>Antes de mergulhar nos links, precisamos entender como o HTML se comunica. Muitas vezes chamamos as configurações das tags de "parâmetros", mas o termo técnico correto é Atributo.</p>
+            <ul>
+                <li>Atributo (O "O quê"): É o nome da característica que você quer modificar na tag. Ele sempre vem antes do sinal de igual (ex: href, target).</li>
+                <li>Valor (O "Como"): É a instrução específica que você dá ao atributo. Ele sempre deve estar entre aspas (ex: "<code>https://google.com</code>", "<code>_blank</code>").</li>
+                <li>Analogia: Pense na tag como um carro. O atributo seria "cor" e o valor seria "verde". Sem o atributo, o navegador não sabe o que configurar; sem o valor, ele não sabe qual instrução aplicar.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>II. Desvendando os Atributos: <code>href</code>, <code>target</code> e <code>rel</code></h2>
+            <p>Para que um link funcione e se comporte da maneira correta, utilizamos três atributos principais:</p>
+            <h3><code>href</code> (Hypertext Reference)</h3>
+        <p>É o atributo mais importante. Ele define o destino do link. Sem ele, a tag &lt;a&gt; perde sua função principal.</p>
+        <ul>
+            <li>Pode ser uma URL completa (Link Externo).</li>
+            <li>Pode ser um caminho de arquivo (Link Interno entre pastas do sistema operacional).</li>
+            <li>Pode ser uma "âncora" para a mesma página (usando #id).</li>
+        </ul>
+        <h3><code>target</code> (Onde abrir?)</h3>
+        <p>Define em qual janela ou aba o destino será carregado.</p>
+        <ul>
+            <li>_self: Valor padrão. Abre na mesma aba que o usuário já está.</li>
+            <li>_blank: Abre o link em uma nova aba ou janela. Muito usado para links externos para que o usuário não saia do seu site.</li>
+            <li>_parent / _top: Usados em contextos de iframes para abrir o link na janela pai ou no topo da hierarquia.</li>
+        </ul>
+        <h3>rel (Relationship)</h3>
+        <p>O atributo <code>rel</code> descreve a <strong>relação</strong> entre a página atual e a página de destino. Ele é invisível para o usuário comum, mas fundamental para navegadores e mecanismos de busca (SEO).</p>
+        </section>
+        <section>
+            <h2>III. Valores Aceitáveis para o Atributo rel</h2>
+            <p>O <code>rel</code> possui uma lista vasta de valores. Aqui estão os principais e mais utilizados no desenvolvimento moderno:</p>
+            <!-- Criar tabela para informação
+            Valor
+            Descrição
+            next
+            Indica que o link aponta para o próximo documento de uma série (como você usou no seu Nível 1).
+            prev
+            Indica o documento anterior em uma sequência.
+            author
+            Indica que o link aponta para o perfil ou página do autor do documento.
+            external
+            Informa que o link leva a um site que não faz parte do domínio atual.
+            nofollow
+            Diz aos motores de busca (Google) para não "passar autoridade" para aquele link. Útil para links de comentários ou pagos.
+            noopener
+            Impede que a nova página aberta tenha acesso à página original via JavaScript. Vital para segurança ao usar target="_blank".
+            noreferrer
+            Similar ao noopener, mas também impede que o navegador envie o endereço da sua página para o site de destino.
+            license
+            Indica que o conteúdo do destino é a licença de direitos autorais do documento atual.
+            help
+            Link para um documento de ajuda ou suporte contextual.
+            search
+            Indica um recurso de busca para o documento atual.
+            -->
+        </section>
+    </main>
     <footer>
-        <a href="#" target="_blank" rel="follow"><i class="fa-brands fa-github"></i> Github</a>
-        <a href="#" target="_blank" rel="follow"><i class="fa-regular fa-envelope"></i> E-mail</a>
-        <a href="#" target="_blank" rel="follow"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        <p>Estou desenvolvendo esse blog no intuito de documentar minha jornada</p>
+    GitHub // E-mail // LinkedIn
+    <p>Este blog tem como objetivo principal demonstrar minhas competências em desenvolvimento web, <strong>possuindo caráter</strong> estritamente <strong>acadêmico</strong> e <strong>sem fins lucrativos</strong>.</p>
     </footer>
-    <script>
-        function clickMenu() {
-            const menuItens = document.getElementById('itens');
-            menuItens.classList.toggle('mostrar');
-        }
-    </script>
 </body>
 </html>

@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style.css">
-    <title>Conexões HTML</title>
+    <title>Conexões</title>
 </head>
 <body>
     <header>
-    <nav>
-        <ul>
-            <li><a href="../../index.html" target="" rel="">Página principal</a></li>
-            <li><a href="../estrutura/index.html" target="" rel="">Artigo anterior</a></li>
-            <!-- i > bars -->
-            <li><a href="../listas/index.html" target="" rel="">Próximo artigo</a></li>
-        </ul>
-    </nav>
-    <h1>Diário DEV</h1>
-    <span>Por Oderlândio Júnior</span>
+        <nav>
+            <ul>
+                <li><a href="../../index.html" target="" rel="">Página principal</a></li>
+                <!-- i > bars -->
+                <li><a href="../estrutura/index.html" target="" rel="">Artigo anterior</a></li>
+                <li><a href="../listas/index.html" target="" rel="">Próximo artigo</a></li>
+            </ul>
+        </nav>
+        <h1>Diário DEV</h1>
+        <span>Por Oderlândio Júnior</span>
     </header>
     <main>
         <section>
-            <h2>O Guia Definitivo da Tag de Âncora (&lt;a&gt;)</h2>
+            <h2>O Guia Definitivo da Tag de Âncora &lt;a&gt;</h2>
             <p>A tag &lt;a&gt; (de anchor) é, sem dúvida, a espinha dorsal da World Wide Web. É ela que permite a navegação entre páginas, transformando documentos isolados em uma rede conectada.</p>
             <h2>I. Entendendo a Anatomia: Atributos (Parâmetros) e Valores</h2>
             <p>Antes de mergulhar nos links, precisamos entender como o HTML se comunica. Muitas vezes chamamos as configurações das tags de "parâmetros", mas o termo técnico correto é Atributo.</p>
@@ -35,21 +34,21 @@
             <h2>II. Desvendando os Atributos: <code>href</code>, <code>target</code> e <code>rel</code></h2>
             <p>Para que um link funcione e se comporte da maneira correta, utilizamos três atributos principais:</p>
             <h3><code>href</code> (Hypertext Reference)</h3>
-        <p>É o atributo mais importante. Ele define o destino do link. Sem ele, a tag &lt;a&gt; perde sua função principal.</p>
-        <ul>
-            <li>Pode ser uma URL completa (Link Externo).</li>
-            <li>Pode ser um caminho de arquivo (Link Interno entre pastas do sistema operacional).</li>
-            <li>Pode ser uma "âncora" para a mesma página (usando #id).</li>
-        </ul>
-        <h3><code>target</code> (Onde abrir?)</h3>
-        <p>Define em qual janela ou aba o destino será carregado.</p>
-        <ul>
-            <li>_self: Valor padrão. Abre na mesma aba que o usuário já está.</li>
-            <li>_blank: Abre o link em uma nova aba ou janela. Muito usado para links externos para que o usuário não saia do seu site.</li>
-            <li>_parent / _top: Usados em contextos de iframes para abrir o link na janela pai ou no topo da hierarquia.</li>
-        </ul>
-        <h3>rel (Relationship)</h3>
-        <p>O atributo <code>rel</code> descreve a <strong>relação</strong> entre a página atual e a página de destino. Ele é invisível para o usuário comum, mas fundamental para navegadores e mecanismos de busca (SEO).</p>
+            <p>É o atributo mais importante. Ele define o destino do link. Sem ele, a tag &lt;a&gt; perde sua função principal.</p>
+            <ul>
+                <li>Pode ser uma URL completa (Link Externo).</li>
+                <li>Pode ser um caminho de arquivo (Link Interno entre pastas do sistema operacional).</li>
+                <li>Pode ser uma "âncora" para a mesma página (usando #id).</li>
+            </ul>
+            <h3><code>target</code> (Onde abrir?)</h3>
+            <p>Define em qual janela ou aba o destino será carregado.</p>
+            <ul>
+                <li>_self: Valor padrão. Abre na mesma aba que o usuário já está.</li>
+                <li>_blank: Abre o link em uma nova aba ou janela. Muito usado para links externos para que o usuário não saia do seu site.</li>
+                <li>_parent / _top: Usados em contextos de iframes para abrir o link na janela pai ou no topo da hierarquia.</li>
+            </ul>
+            <h3>rel (Relationship)</h3>
+            <p>O atributo <code>rel</code> descreve a <strong>relação</strong> entre a página atual e a página de destino. Ele é invisível para o usuário comum, mas fundamental para navegadores e mecanismos de busca (SEO).</p>
         </section>
         <section>
             <h2>III. Valores Aceitáveis para o Atributo rel</h2>
@@ -81,8 +80,10 @@
         </section>
     </main>
     <footer>
-    GitHub // E-mail // LinkedIn
-    <p>Este blog tem como objetivo principal demonstrar minhas competências em desenvolvimento web, <strong>possuindo caráter</strong> estritamente <strong>acadêmico</strong> e <strong>sem fins lucrativos</strong>.</p>
+        <nav>
+            <a href="">GitHub</a> <a href="">E-mail</a> <a href="">LinkedIn</a>
+        </nav>
+        <p>Este blog tem como objetivo principal demonstrar minhas competências em desenvolvimento web, <strong>possuindo caráter</strong> estritamente <strong>acadêmico</strong> e <strong>sem fins lucrativos</strong>.</p>
     </footer>
 </body>
 </html>

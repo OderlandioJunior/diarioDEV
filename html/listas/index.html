@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html" target="" rel="">Página principal</a></li>
+                <!-- i > bars -->
+                <li><a href="../links/index.html" target="" rel="">Artigo anterior</a></li>
+                <li><a href="../midia/index.html" target="" rel="">Próximo artigo</a></li>
+            </ul>
+        </nav>
+        <h1>Diário DEV</h1>
+        <span>Por Oderlândio Júnior</span>
+    </header>
+    <main>
+        <section>
+            <h2>Estruturas de Agrupamento: Listas Ordenadas, Desordenadas e Itens</h2>
+            <p>Na construção de interfaces, raramente apresentamos dados de forma isolada. As listas no HTML são elementos semânticos que informam ao navegador que um conjunto de itens possui uma relação lógica entre si. Elas são a base para menus de navegação, índices de conteúdo, passos de um tutorial ou simples enumerações de características.</p>
+            <h3>A Anatomia de uma Lista: O Container e o Conteúdo</h3>
+            <p>Diferente de um parágrafo (<code>&lt;p&gt;</code>), uma lista é uma estrutura composta. Ela exige dois níveis de marcação:</p>
+            <ol>
+                <li><strong>O Container (Pai):</strong> Define o tipo da lista (se a ordem importa ou não). São as tags <code>&lt;ul&gt;</code> ou <code>&lt;ol&gt;</code>.</li>
+                <li><strong>O Item (Filho):</strong> A tag <code>&lt;li&gt;</code> (List Item), que delimita cada unidade de informação dentro da lista.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>1. Listas Desordenadas (<code>&lt;ul&gt;</code>)</h2>
+            <p>A tag <code>&lt;ul&gt;</code> (<em>Unordered List</em>) é utilizada quando a ordem dos fatores não altera o sentido da informação. Por padrão, os navegadores exibem esses itens com uma "bala" (<em>bullet point</em>) ao lado.</p>
+            <ul>
+                <li>Uso Semântico: Listas de compras, itens de um menu, ou uma coleção de links relacionados.</li>
+                <li>Atributos de Estrutura: Embora o visual seja controlado pelo CSS, o HTML entende que todos os itens ali têm o mesmo peso hierárquico.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>2. Listas Ordenadas (<code>&lt;ol&gt;</code>)</h2>
+            <p>A tag <code>&lt;ol&gt;</code> (<em>Ordered List</em>) é empregada quando a sequência dos itens é vital para a compreensão do conteúdo. O navegador as renderiza automaticamente com números ou letras.</p>
+            <ul>
+                <li>Uso Semântico: Tutoriais passo a passo, rankings, receitas ou cronogramas.</li>
+                <li>Atributos HTML Úteis:</li>
+                <ul>
+                    <li><code>start</code>: Define por qual número a lista deve começar (ex: <code>&lt;ol start="5"&gt;</code>).</li>
+                    <li><code>reversed</code>: Inverte a numeração (contagem regressiva), sem alterar a ordem do texto.</li>
+                    <li><code>type</code>: Define o tipo de marcador (1 para números, 'A' para letras maiúsculas, 'i' para números romanos).</li>
+                </ul>
+            </ul>
+        </section>
+        <section>
+            <h2>3. O Item de Lista (<code>&lt;li&gt;</code>)</h2>
+            <p>O elemento <code>&lt;li&gt;</code> é um dos mais versáteis do HTML. Por ser um elemento de bloco (<em>block-level</em>), ele pode conter quase qualquer outra tag dentro de si.</p>
+            <ul>
+                <li><strong>Aninhamento Complexo:</strong> É perfeitamente válido colocar parágrafos, imagens ou até mesmo <strong>outras listas</strong> dentro de um <code>&lt;li&gt;</code>. Isso é o que chamamos de "Listas Aninhadas", essencial para criar submenus ou sumários detalhados.</li>
+                <li><strong>Valor de Atributo:</strong> Em listas ordenadas, você pode usar o atributo <code>value</code> em um <code>&lt;li&gt;</code> específico para forçar a mudança do número a partir daquele ponto.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>4. Semântica e Acessibilidade</h2>
+            <p>Para leitores de tela, as listas são "marcos" de navegação. Quando um usuário com deficiência visual chega em uma <code>&lt;ul&gt;</code>, o software anuncia: "<em>Lista com X itens</em>". Isso permite que o usuário saiba de antemão o tamanho do conteúdo e decida se quer ouvir item por item ou saltar para o próximo bloco.</p>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="">GitHub</a> <a href="">E-mail</a> <a href="">LinkedIn</a>
+        </nav>
+        <p>Este blog tem como objetivo principal demonstrar minhas competências em desenvolvimento web, <strong>possuindo caráter</strong> estritamente <strong>acadêmico</strong> e <strong>sem fins lucrativos</strong>.</p>
+    </footer>
+</body>
+</html>

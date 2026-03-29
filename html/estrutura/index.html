@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style.css">
     <title>Estrutura HTML</title>
 </head>
 <body>
     <header>
-    <nav>
-        <ul>
-            <li><a href="../../index.html" target="" rel="">Página principal</a></li>
-            <li><a href="../links/index.html" target="" rel="">Próximo artigo</a></li>
-            <!-- i > bars -->
-            <li><a href="#perfil" target="_self" rel="">Sobre mim</a></li>
-        </ul>
-    </nav>
-    <h1>Diário DEV</h1>
-    <span>Por Oderlândio Júnior</span>
+        <nav>
+            <ul>
+                <li><a href="../../index.html" target="" rel="">Página principal</a></li>
+                <!-- i > bars -->
+                <li><a href="../links/index.html" target="" rel="">Próximo artigo</a></li>
+            </ul>
+        </nav>
+        <h1>Diário DEV</h1>
+        <span>Por Oderlândio Júnior</span>
     </header>
     <main>
         <section>
@@ -26,25 +24,22 @@
             <h3>O Paradigma da Transição: .doc vs.docx</h3>
             <p>A evolução dos formatos de processamento de texto exemplifica a mudança da indústria em direção a padrões abertos e extensíveis. O formato .doc, utilizado pelo Microsoft Word até 2003, é um formato binário proprietário. Ele armazena informações de formatação de maneira compacta, porém opaca, dificultando a interoperabilidade entre diferentes softwares e aumentando o risco de corrupção de dados.</p>
             <p>Com o lançamento do Office 2007, surgiu o .docx, fundamentado no padrão Office Open XML (OOXML). Tecnicamente, um arquivo .docx é um contêiner comprimido (baseado em ZIP) que abriga uma estrutura de arquivos XML. Para um desenvolvedor, o .docx é superior porque seu conteúdo pode ser lido e manipulado programaticamente sem a necessidade do Microsoft Word, além de oferecer maior segurança e eficiência de armazenamento devido à compressão nativa.</p>
-            <h3>O Ecossistema de Ativos Visuais:.jpg,.jpeg e.png</h3>
+            <h3>O Ecossistema de Ativos Visuais: .jpg,.jpeg e.png</h3>
             <p>A gestão de imagens é um dos pilares da performance web. O formato .jpg (ou .jpeg, que são tecnicamente idênticos em termos de compressão) utiliza um algoritmo de compressão "lossy" (com perda). Ele reduz o tamanho do arquivo descartando informações visuais que o olho humano tem dificuldade em perceber, sendo ideal para fotografias complexas onde o equilíbrio entre peso e qualidade é vital.</p>
             <p>Em contrapartida, o .png (Portable Network Graphics) utiliza compressão "lossless" (sem perda). Sua principal vantagem na web é o suporte a canais de transparência (alfa), o que o torna indispensável para logotipos, ícones e elementos de interface que precisam ser sobrepostos a fundos variáveis sem apresentar bordas serrilhadas ou fundos brancos opacos.</p>
-            <h3>A Web Moderna e o Formato.webp</h3>
+            <h3>A Web Moderna e o Formato .webp</h3>
             <p>Embora não tenha sido o foco de documentos legados, o formato .webp é o padrão de ouro no roadmap de 2025. Desenvolvido pelo Google, o WebP oferece compressão superior tanto para imagens com perda quanto sem perda. Frequentemente, uma imagem WebP é 25% a 34% menor que um JPEG equivalente, mantendo a mesma qualidade visual e suportando transparência e animações. O uso de WebP impacta diretamente o Core Web Vital conhecido como Largest Contentful Paint (LCP), uma métrica de velocidade de carregamento essencial para SEO.</p>
-            <h3>Arquivos de Lógica e Intercâmbio de Dados:.js e.json</h3>
+            <h3>Arquivos de Lógica e Intercâmbio de Dados: .js e .json</h3>
             <p>No desenvolvimento web, o arquivo .js contém o código-fonte em JavaScript, que é interpretado pelo motor (engine) do navegador para adicionar comportamento dinâmico às páginas estáticas. Complementarmente, o formato .json (JavaScript Object Notation) consolidou-se como o padrão universal para a troca de dados entre front-end e back-end. Sua sintaxe baseada em texto é leve, legível por humanos e facilmente processada por quase todas as linguagens de programação modernas.</p>
         </section>
         <section>
             <h2>II. Anatomia e Estrutura de um Documento HTML5</h2>
             <p>A construção de um site resiliente e acessível começa pela compreensão minuciosa do esqueleto HTML. Um documento HTML5 não é apenas uma sequência de tags; é uma hierarquia de objetos que formam o Document Object Model (DOM). A omissão ou o uso incorreto de tags fundamentais pode levar ao "Quirks Mode", onde o navegador renderiza a página de forma imprevisível para manter compatibilidade com tecnologias obsoletas da década de 90.</p>
-            <div class="image">
-                <img src="assets/estrutura-html.PNG" alt="">
-            </div>
             <h3>O Preâmbulo Obrigatório: <code>!DOCTYPE html</code></h3>
-            <p>A primeira linha de qualquer documento moderno deve ser obrigatoriamente <code>!DOCTYPE html</code>. Tecnicamente, esta instrução não é uma tag HTML, mas uma declaração de tipo de documento (DTD). Ela informa ao navegador que o arquivo segue os padrões vigentes do HTML5, garantindo que o motor de renderização utilize o "Standards Mode" para interpretar o layout e os estilos CSS com precisão.</p>
+            <p>A primeira linha de qualquer documento moderno deve ser obrigatoriamente <code>!DOCTYPE html</code>. Tecnicamente, esta instrução não é uma tag HTML, mas uma declaração de tipo de documento. Ela informa ao navegador que o arquivo segue os padrões vigentes do HTML5, garantindo que o motor de renderização utilize o "Standards Mode" para interpretar o layout e os estilos CSS com precisão.</p>
             <h3>A Raiz e a Internacionalização: <code>html</code> e <code>html lang</code></h3>
-            <p>A tag <code>html</code> envolve todo o conteúdo do documento, exceto o doctype. Um dos atributos mais críticos desta tag é o lang (ex: <code>html lang="pt-br"</code>). Esta declaração de idioma é fundamental para a acessibilidade, pois informa aos leitores de tela qual sintetizador de voz e qual dicionário de pronúncia utilizar para usuários com deficiência visual. Além disso, motores de busca e ferramentas de tradução automática utilizam este atributo para indexar e processar o conteúdo de acordo com a região geográfica e a língua do usuário.</p>
-            <h3>O Cérebro da Página: <code>head</code> e os <code">Metadados</code></h3>
+            <p>A tag <code>html</code> envolve todo o conteúdo do documento, exceto o <code>doctype</code>. Um dos atributos mais críticos desta tag é o lang (ex: <code>html lang="pt-br"</code>). Esta declaração de idioma é fundamental para a acessibilidade, pois informa aos leitores de tela qual sintetizador de voz e qual dicionário de pronúncia utilizar para usuários com deficiência visual. Além disso, motores de busca e ferramentas de tradução automática utilizam este atributo para indexar e processar o conteúdo de acordo com a região geográfica e a língua do usuário.</p>
+            <h3>O Cérebro da Página: <code>head</code> e os Metadados</h3>
             <p>O elemento <code>head</code> atua como o cabeçalho de metadados do documento. As informações contidas aqui não são visíveis diretamente para o visitante comum (exceto o título e o favicon), mas são vitais para o funcionamento e a otimização da página.</p>
             <ol>
                 <li>
@@ -115,7 +110,46 @@
             </ul>
         </section>
         <section>
-            <h2>V. Arquitetura Semântica e Regras de Aninhamento</h2>
+            <h2>V. Paragrafos: Formatação, Citações e a Lógica dos Caracteres</h2>
+            <p>Se as seções e títulos formam o esqueleto do site, as tags de formatação de texto são os nervos que dão sensibilidade ao conteúdo. No HTML5, formatar um texto não é apenas sobre "estética", mas sobre informar ao navegador e aos motores de busca o valor real de cada palavra ou frase.</p>
+            <h3>1. O Fluxo de Texto e a Quebra de Linha</h3>
+            <p>Diferente de um editor de texto comum, o HTML ignora múltiplos espaços ou <code>ENTER</code> dados diretamente no código-fonte.</p>
+            <ul>
+                <li><strong>Seguimento Contínuo:</strong> Um parágrafo (<code>&lt;p&gt;</code>) mantém o fluxo do texto constante para se adaptar ao tamanho da tela do usuário.</li>
+                <li><strong>Quebra Manual:</strong> Quando precisamos forçar uma descida de linha sem criar um novo parágrafo, utilizamos a tag <code>&lt;br&gt;</code>. Ela é uma tag "vazia" (não possui fechamento) e deve ser usada com moderação para não prejudicar a responsividade.</li>
+            </ul>
+            <h3>2. Semântica Visual: Destaque vs. Aparência</h3>
+            <p>A grande mudança do HTML5 foi a separação entre tags que apenas mudam o visual e tags que dão significado real:</p>
+            <!-- Criar tabela 
+            Função,Tag Não Semântica (Aparência),Tag Semântica (Significado)
+            Negrito,<b>: Apenas deixa a letra grossa.,<strong>: Indica que o termo é de extrema importância.
+            Itálico,<i>: Apenas inclina a letra.,<em>: Dá ênfase vocal ou emocional ao trecho.
+            Sublinhado,<u>: Apenas risca embaixo.,<ins>: Indica que o texto foi inserido/adicionado ao documento.
+            -->
+            <h3>3. Marcações Especiais e Notações Técnicas</h3>
+            <p>Para conteúdos que fogem do texto comum, o HTML oferece ferramentas de precisão:</p>
+            <ul>
+                <li>Texto Marcado (<code>&lt;mark&gt;</code>): Funciona como um "marca-texto" amarelo, ideal para destacar termos de busca ou passagens relevantes.</li>
+                <li>Escrita Científica: Utilizamos <code>&lt;sup&gt;</code> para sobrescrito (ex: x<sup>2</sup>) e <code>&lt;sub&gt;</code> para subescrito (ex: H<sub>2</sub>O).</li>
+                <li>Abreviações (<code>&lt;abbr&gt;</code>): Permite que, ao passar o mouse sobre uma sigla, o navegador exiba seu significado completo através do atributo title.</li>
+            </ul>
+            <h3>4. Citações e Referências Externas</h3>
+            <p>Trabalhar com textos acadêmicos ou blogs exige dar crédito às fontes. O HTML possui duas formas principais:</p>
+            <ul>
+                <li><strong>Citações Curtas (<code>&lt;q&gt;</code>):</strong> Usada para frases inseridas dentro de um parágrafo. O navegador geralmente adiciona as aspas automaticamente.</li>
+                <li><strong>Citações Longas (<code>&lt;blockquote&gt;</code>):</strong> Cria um bloco isolado para citações extensas. O atributo <code>cite</code> dentro dessa tag é usado para indicar a URL original da fonte, ajudando no SEO e na credibilidade do conteúdo</li>
+            </ul>
+            <h3>5. O Universo do Código: <code>&lt;code&gt;</code> e <code>&lt;pre&gt;</code></h3>
+            <p>Para exibir textos onde a indentação e os caracteres especiais devem ser preservados:</p>
+            <ul>
+                <li><code>&lt;code&gt;</code>: Formata um pequeno trecho de código com fonte monoespaçada (onde todas as letras têm a mesma largura), facilitando a leitura técnica.</li>
+                <li>
+                    <code>&lt;pre&gt;</code>: Abreviação de "pré-formatado". Esta tag é única pois ela <strong>respeita</strong> exatamente os espaços e quebras de linha que você digitar no código, sendo perfeita para exibir blocos inteiros de linguagens de programação.
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>VI. Arquitetura Semântica e Regras de Aninhamento</h2>
             <p>A semântica no HTML5 representa a evolução da web de um conjunto de documentos visuais para uma teia de dados compreensíveis por máquinas. Utilizar tags semânticas não é uma questão estética, mas funcional: elas permitem que tecnologias assistivas (leitores de tela) e algoritmos de busca (Googlebot) entendam a hierarquia e a importância de cada parte do conteúdo.</p>
             <h3>A Pirâmide Semântica: Marcos de Navegação</h3>
             <p>O HTML moderno define "Marcos" (Landmarks) que facilitam a navegação rápida. O uso correto desses marcos substitui a antiga prática de usar <code>&lt;div&gt;</code> para tudo (o chamado "Divitis").</p>
@@ -135,14 +169,53 @@
             </ol>
         </section>
         <section>
-            <h2>VI. A Transição para o CSS e JS</h2>
+            <h2>VII. Identificadores e Classificadores: A Identidade dos Elementos (ID e Class)</h2>
+            <p>Após definir a arquitetura semântica do documento, o desenvolvedor precisa de mecanismos para distinguir elementos específicos ou agrupar elementos que compartilham características comuns. No HTML5, isso é feito através dos atributos globais <code>id</code> e <code>class</code>. Embora sejam frequentemente associados ao CSS, sua função primária é estrutural: fornecer "ganchos" (hooks) para que o navegador, scripts e motores de busca identifiquem partes do DOM.</p>
+            <h3>1. O Atributo ID: A Identidade Única</h3>
+            <p>O atributo <code>id</code> funciona como o "Nome Próprio" ou o "CPF" de um elemento. Sua principal regra é a <strong>exclusividade</strong>: um valor de <code>id</code> só pode ser usado uma única vez em todo o documento HTML.</p>
+            <ul>
+                <li><strong>Propósito Estrutural:</strong> Ele isola um componente único na página, como o <code>id="menu-principal"</code> ou <code>id="rodape-contato"</code>.</li>
+                <li><strong>Âncoras de Navegação:</strong> O <code>id</code> permite a criação de links internos (bookmark links). Quando você clica em um link como <code>&lt;a href="#perfil"&gt;</code>, o navegador busca o elemento que possui o <code>id="perfil"</code> e rola a página automaticamente até ele.</li>
+                <li><strong>Acessibilidade:</strong> É fundamental para conectar etiquetas a campos de formulário (usando o atributo <code>for</code> no <code>&lt;label&gt;</code>) e para tecnologias assistivas descreverem relações entre elementos complexos.</li>
+            </ul>
+            <h3>2. O Atributo Class: A Classificação por Grupo</h3>
+            <p>Diferente do ID, o atributo <code>class</code> funciona como um "Sobrenome" ou uma "Etiqueta de Categoria". Ele é usado para agrupar múltiplos elementos que possuem a mesma finalidade ou comportamento, independentemente da tag que utilizam.</p>
+            <ul>
+                <li><strong>Multiplicidade:</strong> Você pode usar a mesma classe em dezenas de elementos diferentes (ex: todos os botões de compra podem ter a classe <code>class="btn-comprar"</code>).</li>
+                <li><code>Composição:</code> Um único elemento pode pertencer a várias classes simultaneamente, bastando separá-las por um espaço: <code>&lt;article class="postagem destaque tecnologia"&gt;</code>. Isso permite que o elemento herde comportamentos de diferentes categorias.</li>
+                <li><strong>Semântica Customizada:</strong> Quando as tags padrões do HTML (como <code>section</code> ou <code>article</code>) não são específicas o suficiente, as classes ajudam a descrever o que aquele bloco representa (ex:<code> class="card-produto" ou class="alerta-erro"</code>).</li>
+            </ul>
+            <h3>3. Diferenças Técnicas e Boas Práticas</h3>
+            <p>Evite começar nomes de IDs ou Classes com números ou caracteres especiais. Prefira nomes semânticos que descrevam a função do elemento (ex: class="noticia-principal") em vez da sua aparência (ex: class="texto-azul-negrito"), pois o design pode mudar, mas a função do elemento geralmente permanece a mesma.</p>
+            <!-- Criar tabela
+            Característica
+            Atributo <code>id</code>
+            Atributo <code>class</code>
+            Frequência
+            Deve ser único na página.
+            Pode ser repetido várias vezes.
+            Nomenclatura
+            Geralmente em camelCase ou com hifens.
+            Geralmente com hifens (kebab-case).
+            Prioridade
+            Alta (identifica um alvo específico).
+            Média (identifica um tipo de elemento).
+            Uso em Links
+            Funciona como destino de âncoras (#).
+            Não pode ser usado como destino de âncoras.
+            -->
+        </section>
+        <section>
+            <h2>VIII. A Transição para o CSS e JS</h2>
             <p>No roadmap do blog, após documentar a estrutura HTML, o próximo passo natural é a introdução do CSS para dar vida às "caixas" criadas. Isso inclui o estudo de Flexbox e Grid para o posicionamento avançado de blocos, além de variáveis CSS para manter o código limpo. Em seguida, o JavaScript entra para manipular esses elementos do DOM em tempo real, utilizando APIs modernas para buscar dados dinâmicos e atualizar a interface sem recarregar a página.</p>
             <p>A documentação desses processos no Diário DEV serve como um registro da evolução da lógica de programação. Ao explicar por que escolheu um <code>&lt;article&gt;</code> em vez de uma <code>&lt;div&gt;</code>, ou como um <code>.webp</code> otimizou a velocidade do site, o desenvolvedor demonstra um pensamento crítico.</p>
         </section>
     </main>
     <footer>
-    GitHub // E-mail // LinkedIn
-    <p>Este blog tem como objetivo principal demonstrar minhas competências em desenvolvimento web, <strong>possuindo caráter</strong> estritamente <strong>acadêmico</strong> e <strong>sem fins lucrativos</strong>.</p>
+        <nav>
+            <a href="">GitHub</a> <a href="">E-mail</a> <a href="">LinkedIn</a>
+        </nav>
+        <p>Este blog tem como objetivo principal demonstrar minhas competências em desenvolvimento web, <strong>possuindo caráter</strong> estritamente <strong>acadêmico</strong> e <strong>sem fins lucrativos</strong>.</p>
     </footer>
 </body>
 </html>

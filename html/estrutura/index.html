@@ -19,21 +19,7 @@
     </header>
     <main>
         <section>
-            <h2>I. Tipologias de Arquivos e a Anatomia Digital na Programação</h2>
-            <p>Para um desenvolvedor, compreender a natureza dos arquivos com os quais interage é o primeiro passo para o domínio do ambiente de desenvolvimento. Uma extensão de arquivo não é apenas um rótulo; ela sinaliza ao sistema operacional e às aplicações o formato interno dos dados e o interpretador necessário para processá-los. Mudar a extensão de um arquivo manualmente (por exemplo, de .jpg para .js) não altera a organização interna dos seus bits, o que resultará em erro de execução. No contexto do Diário DEV, é essencial diferenciar entre formatos binários, formatos de marcação e scripts.</p>
-            <h3>O Paradigma da Transição: .doc vs.docx</h3>
-            <p>A evolução dos formatos de processamento de texto exemplifica a mudança da indústria em direção a padrões abertos e extensíveis. O formato .doc, utilizado pelo Microsoft Word até 2003, é um formato binário proprietário. Ele armazena informações de formatação de maneira compacta, porém opaca, dificultando a interoperabilidade entre diferentes softwares e aumentando o risco de corrupção de dados.</p>
-            <p>Com o lançamento do Office 2007, surgiu o .docx, fundamentado no padrão Office Open XML (OOXML). Tecnicamente, um arquivo .docx é um contêiner comprimido (baseado em ZIP) que abriga uma estrutura de arquivos XML. Para um desenvolvedor, o .docx é superior porque seu conteúdo pode ser lido e manipulado programaticamente sem a necessidade do Microsoft Word, além de oferecer maior segurança e eficiência de armazenamento devido à compressão nativa.</p>
-            <h3>O Ecossistema de Ativos Visuais: .jpg,.jpeg e.png</h3>
-            <p>A gestão de imagens é um dos pilares da performance web. O formato .jpg (ou .jpeg, que são tecnicamente idênticos em termos de compressão) utiliza um algoritmo de compressão "lossy" (com perda). Ele reduz o tamanho do arquivo descartando informações visuais que o olho humano tem dificuldade em perceber, sendo ideal para fotografias complexas onde o equilíbrio entre peso e qualidade é vital.</p>
-            <p>Em contrapartida, o .png (Portable Network Graphics) utiliza compressão "lossless" (sem perda). Sua principal vantagem na web é o suporte a canais de transparência (alfa), o que o torna indispensável para logotipos, ícones e elementos de interface que precisam ser sobrepostos a fundos variáveis sem apresentar bordas serrilhadas ou fundos brancos opacos.</p>
-            <h3>A Web Moderna e o Formato .webp</h3>
-            <p>Embora não tenha sido o foco de documentos legados, o formato .webp é o padrão de ouro no roadmap de 2025. Desenvolvido pelo Google, o WebP oferece compressão superior tanto para imagens com perda quanto sem perda. Frequentemente, uma imagem WebP é 25% a 34% menor que um JPEG equivalente, mantendo a mesma qualidade visual e suportando transparência e animações. O uso de WebP impacta diretamente o Core Web Vital conhecido como Largest Contentful Paint (LCP), uma métrica de velocidade de carregamento essencial para SEO.</p>
-            <h3>Arquivos de Lógica e Intercâmbio de Dados: .js e .json</h3>
-            <p>No desenvolvimento web, o arquivo .js contém o código-fonte em JavaScript, que é interpretado pelo motor (engine) do navegador para adicionar comportamento dinâmico às páginas estáticas. Complementarmente, o formato .json (JavaScript Object Notation) consolidou-se como o padrão universal para a troca de dados entre front-end e back-end. Sua sintaxe baseada em texto é leve, legível por humanos e facilmente processada por quase todas as linguagens de programação modernas.</p>
-        </section>
-        <section>
-            <h2>II. Anatomia e Estrutura de um Documento HTML5</h2>
+            <h2>I. Anatomia e Estrutura de um Documento HTML5</h2>
             <p>A construção de um site resiliente e acessível começa pela compreensão minuciosa do esqueleto HTML. Um documento HTML5 não é apenas uma sequência de tags; é uma hierarquia de objetos que formam o Document Object Model (DOM). A omissão ou o uso incorreto de tags fundamentais pode levar ao "Quirks Mode", onde o navegador renderiza a página de forma imprevisível para manter compatibilidade com tecnologias obsoletas da década de 90.</p>
             <h3>O Preâmbulo Obrigatório: <code>!DOCTYPE html</code></h3>
             <p>A primeira linha de qualquer documento moderno deve ser obrigatoriamente <code>!DOCTYPE html</code>. Tecnicamente, esta instrução não é uma tag HTML, mas uma declaração de tipo de documento. Ela informa ao navegador que o arquivo segue os padrões vigentes do HTML5, garantindo que o motor de renderização utilize o "Standards Mode" para interpretar o layout e os estilos CSS com precisão.</p>
@@ -59,7 +45,7 @@
             <p>O elemento <code>body</code> contém toda a parte visível do site: textos, imagens, botões, formulários e links. Enquanto o <code>head</code> lida com as instruções para o navegador, o <code>body</code> é o palco onde o conteúdo é estruturado e apresentado ao usuário final. É dentro do corpo que o desenvolvedor aplica a semântica e organiza o layout através do modelo de caixas.</p>
         </section>
         <section>
-            <h2>III. O Modelo de Caixas (Box Model) e o Fluxo de Documentos</h2>
+            <h2>II. O Modelo de Caixas (Box Model) e o Fluxo de Documentos</h2>
             <p>No desenvolvimento frontend, entender que "tudo é uma caixa" é a chave para o domínio do layout. Mesmo que um elemento pareça circular no navegador, ele reside dentro de uma fronteira retangular definida pelo CSS Box Model. No entanto, antes de aplicar estilos complexos, é preciso compreender como o HTML organiza essas caixas por padrão através do "Normal Flow" (Fluxo Normal).</p>
             <h3>Componentes da Caixa no Contexto HTML</h3>
             <p>Cada elemento gera uma caixa que consiste em quatro áreas distintas:</p>
@@ -78,7 +64,7 @@
             </ul>
         </section>
         <section>
-            <h2>IV. Títulos como Elementos Block-level</h2>
+            <h2>III. Títulos como Elementos Block-level</h2>
             <p>Tecnicamente, todos os elementos de cabeçalho (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>) são, por padrão, block-level elements. Isso significa que, no contexto do Box Model, eles possuem comportamentos específicos:</p>
             <ul>
                 <li>Ocupação de Espaço: Cada título cria uma "caixa" que ocupa automaticamente 100% da largura disponível do container pai, forçando qualquer conteúdo seguinte a começar em uma nova linha.</li>
@@ -110,7 +96,7 @@
             </ul>
         </section>
         <section>
-            <h2>V. Paragrafos: Formatação, Citações e a Lógica dos Caracteres</h2>
+            <h2>IV. Paragrafos: Formatação, Citações e a Lógica dos Caracteres</h2>
             <p>Se as seções e títulos formam o esqueleto do site, as tags de formatação de texto são os nervos que dão sensibilidade ao conteúdo. No HTML5, formatar um texto não é apenas sobre "estética", mas sobre informar ao navegador e aos motores de busca o valor real de cada palavra ou frase.</p>
             <h3>1. O Fluxo de Texto e a Quebra de Linha</h3>
             <p>Diferente de um editor de texto comum, o HTML ignora múltiplos espaços ou <code>ENTER</code> dados diretamente no código-fonte.</p>
@@ -149,7 +135,7 @@
             </ul>
         </section>
         <section>
-            <h2>VI. Arquitetura Semântica e Regras de Aninhamento</h2>
+            <h2>V. Arquitetura Semântica e Regras de Aninhamento</h2>
             <p>A semântica no HTML5 representa a evolução da web de um conjunto de documentos visuais para uma teia de dados compreensíveis por máquinas. Utilizar tags semânticas não é uma questão estética, mas funcional: elas permitem que tecnologias assistivas (leitores de tela) e algoritmos de busca (Googlebot) entendam a hierarquia e a importância de cada parte do conteúdo.</p>
             <h3>A Pirâmide Semântica: Marcos de Navegação</h3>
             <p>O HTML moderno define "Marcos" (Landmarks) que facilitam a navegação rápida. O uso correto desses marcos substitui a antiga prática de usar <code>&lt;div&gt;</code> para tudo (o chamado "Divitis").</p>
@@ -169,7 +155,7 @@
             </ol>
         </section>
         <section>
-            <h2>VII. Identificadores e Classificadores: A Identidade dos Elementos (ID e Class)</h2>
+            <h2>VI. Identificadores e Classificadores: A Identidade dos Elementos (ID e Class)</h2>
             <p>Após definir a arquitetura semântica do documento, o desenvolvedor precisa de mecanismos para distinguir elementos específicos ou agrupar elementos que compartilham características comuns. No HTML5, isso é feito através dos atributos globais <code>id</code> e <code>class</code>. Embora sejam frequentemente associados ao CSS, sua função primária é estrutural: fornecer "ganchos" (hooks) para que o navegador, scripts e motores de busca identifiquem partes do DOM.</p>
             <h3>1. O Atributo ID: A Identidade Única</h3>
             <p>O atributo <code>id</code> funciona como o "Nome Próprio" ou o "CPF" de um elemento. Sua principal regra é a <strong>exclusividade</strong>: um valor de <code>id</code> só pode ser usado uma única vez em todo o documento HTML.</p>
@@ -206,7 +192,7 @@
             -->
         </section>
         <section>
-            <h2>VIII. A Transição para o CSS e JS</h2>
+            <h2>VII. A Transição para o CSS e JS</h2>
             <p>No roadmap do blog, após documentar a estrutura HTML, o próximo passo natural é a introdução do CSS para dar vida às "caixas" criadas. Isso inclui o estudo de Flexbox e Grid para o posicionamento avançado de blocos, além de variáveis CSS para manter o código limpo. Em seguida, o JavaScript entra para manipular esses elementos do DOM em tempo real, utilizando APIs modernas para buscar dados dinâmicos e atualizar a interface sem recarregar a página.</p>
             <p>A documentação desses processos no Diário DEV serve como um registro da evolução da lógica de programação. Ao explicar por que escolheu um <code>&lt;article&gt;</code> em vez de uma <code>&lt;div&gt;</code>, ou como um <code>.webp</code> otimizou a velocidade do site, o desenvolvedor demonstra um pensamento crítico.</p>
         </section>

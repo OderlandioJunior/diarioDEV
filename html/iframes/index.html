@@ -22,7 +22,7 @@
         <section>
             <h2>Documentos Aninhados: A Engenharia dos <code>iframes</code></h2>
             <p>O elemento <code>&lt;iframe&gt;</code> (<em>Inline Frame</em>) funciona como uma janela recortada no seu documento que exibe um segundo conteúdo independente. É amplamente utilizado para integrar serviços externos, como mapas do Google Maps, vídeos do YouTube ou widgets de redes sociais, sem que o usuário precise sair do seu site.</p>
-            <h3>1. Funcionamento e Atributos Essenciais</h3>
+            <h3>I. Funcionamento e Atributos Essenciais</h3>
             <p>Diferente de uma imagem, o <code>iframe</code> carrega um documento HTML completo dentro de si. Para que ele funcione corretamente, o desenvolvedor utiliza os seguintes atributos:</p>
             <ul>
                 <li><strong><code>src</code> (Source):</strong> Define o endereço (URL) da página ou recurso que será carregado na moldura.</li>
@@ -30,7 +30,7 @@
                 <li><code>title</code>: <strong>Obrigatório para acessibilidade.</strong> Descreve o conteúdo do iframe para que leitores de tela informem ao usuário o que está sendo exibido naquela janela externa.</li>
                 <li><code>loading="lazy"</code>: Uma otimização moderna que instrui o navegador a carregar o conteúdo do iframe apenas quando o usuário rolar a página até ele, economizando dados e melhorando a velocidade de carregamento.</li>
             </ul>
-            <h3>2. O Atributo <code>sandbox</code>: Segurança em Primeiro Lugar</h3>
+            <h3>II. O Atributo <code>sandbox</code>: Segurança em Primeiro Lugar</h3>
             <p>Como você está carregando um site externo dentro do seu, isso pode gerar riscos de segurança (como scripts maliciosos tentando roubar dados). O atributo <code>sandbox</code> aplica restrições extras ao conteúdo do iframe:</p>
             <ul>
                 <li>Se usado vazio (<code>sandbox=""</code>), ele bloqueia quase tudo: formulários, scripts e pop-ups.</li>
@@ -42,7 +42,7 @@
                     <li><code>allow-popups</code>: Permite a abertura de janelas extras a partir do iframe.</li>
                 </ul>
             </ul>
-            <h3>3. Integração de Mídia e Permissões (<code>allow</code>)</h3>
+            <h3>III. Integração de Mídia e Permissões (<code>allow</code>)</h3>
             <p>Para recursos que dependem de hardware ou comportamentos específicos do navegador (como colocar um vídeo em tela cheia), utilizamos o atributo <code>allow</code>.</p>
             <ul>
                 <li><code>allowfullscreen</code>: Permite que o iframe entre em modo de tela cheia.</li>

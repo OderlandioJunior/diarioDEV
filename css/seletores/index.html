@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html" target="" rel="">Página principal</a></li>
+                <!-- i > bars -->
+                <li><a href="../boxmodel/index.html" target="" rel="">Próximo artigo</a></li>
+            </ul>
+        </nav>
+        <h1>Diário DEV</h1>
+        <span>Por Oderlândio Júnior</span>
+    </header>
+    <main>
+        <article>
+            <h2>Seletor CSS</h2>
+            <p>Se o HTML é o corpo do seu site, o CSS é a roupa e a maquiagem. Mas, para vestir a roupa certa na pessoa certa, você precisa apontar para ela. O Seletor é exatamente esse "dedo apontado". É a instrução que diz ao navegador: "Pegue este elemento específico no HTML e aplique estas regras a ele".</p>
+        </article>
+        <article>
+            <h2>A Anatomia de uma Regra CSS</h2>
+            <p>Antes de mergulhar nos tipos, você precisa entender como se escreve uma regra. Ela é composta por:</p>
+            <ul>
+                <li>
+                    <strong>Seletor</strong>: O alvo (ex: <code>h1</code>).
+                </li>
+                <li>
+                    <strong>Declaração</strong>: O conjunto de estilo, que fica entre chaves <code>{ }</code>.
+                </li>
+                <li>
+                    <strong>Propriedade</strong>: O que você quer mudar (ex: <code>color</code>).
+                </li>
+                <li>
+                    <strong>Valor</strong>: A nova característica (ex: <code>blue</code>).
+                </li>
+                <dl>
+                    <dt><strong>Exemplo</strong>:</dt>
+                    <dd><code>h1 { color: blue; }</code> -> Aqui, <code>h1</code> é o seletor.</dd>
+                </dl>
+            </ul>
+        </article>
+        <article>
+            <h2>Tipos de Seletores (A Hierarquia)</h2>
+            <p>Existem várias formas de selecionar um elemento. Vamos das mais comuns para as mais específicas:</p>
+            <ol>
+                <li>
+                    <strong>Seletor de Tipo (ou Tag)</strong>
+                </li>
+                <p>Seleciona todos os elementos de uma mesma tag HTML.</p>
+                <ul>
+                    <li>
+                        <strong>Exemplo</strong>: <code>p { ... }</code>
+                    </li>
+                    <li>
+                        <strong>Efeito</strong>: Todos os parágrafos do seu site ficarão iguais.
+                    </li>
+                </ul>
+                <li>
+                    <strong>Seletor de Classe (<code>.</code>)</strong>
+                </li>
+                Seleciona elementos que possuem o atributo <code>class</code>. É o mais usado no dia a dia porque é reutilizável.
+                <ul>
+                    <li>
+                        <strong>Exemplo</strong>: <code>.botao-azul { ... }</code>
+                    </li>
+                    <li>
+                        <strong>No HTML</strong>: <code>&lt;button class="botao-azul"&gt;Clique aqui&lt;/button&gt;</code>
+                    </li>
+                </ul>
+                <li>
+                    <strong>Seletor de ID (<code>#</code>)</strong>
+                </li>
+                Seleciona um elemento único que possui o atributo <code>id</code>.
+                <ul>
+                    <li>
+                        <strong>Exemplo</strong>: <code>#cabecalho-principal { ... }</code>
+                    </li>
+                    <li>
+                        <strong>Regra de Ouro</strong>: Um ID deve ser único na página. É como o CPF do elemento.
+                    </li>
+                </ul>
+                <li>
+                    <strong>Seletor Universal (<code>*</code>)</strong>
+                </li>
+                <p>Seleciona absolutamente <strong>todos</strong> os elementos da página. Muito usado para fazer "resets" de margens e preenchimentos.</p>
+            </ol>
+        </article>
+        <article>
+            <h2>Especificidade: A Lei do Mais Forte</h2>
+            <p>O que acontece se você disser no CSS que o parágrafo é <strong>azul</strong>, mas em outra linha disser que a classe daquele mesmo parágrafo é <strong>vermelha</strong>? Quem ganha?</p>
+            <p>É aqui que entra a <strong>Especificidade</strong>. O navegador usa um sistema de pontos para decidir qual regra vence:</p>
+            <ol>
+                <li>
+                    <strong>Inline Style (1000 pontos)</strong>: Estilo escrito direto na tag HTML (<code>style="..."</code>). É o "chefe supremo", mas deve ser evitado por dificultar a manutenção.
+                </li>
+                <li>
+                    <strong>ID (100 pontos)</strong>: Muito forte. Ganha de classes e tags.
+                </li>
+                <li>
+                    <strong>Classe</strong>, <strong>Pseudo-classe</strong> e <strong>Atributos (10 pontos)</strong>: Força intermediária.
+                </li>
+                <li>
+                    <strong>Tag</strong> e <strong>Pseudo-elementos (1 ponto)</strong>: A base da pirâmide, a força mais fraca.
+                </li>
+            </ol>
+            <strong>Exemplo Prático:</strong>
+            <ul>
+                <li>
+                    <code>p { color: blue; }</code> (1 ponto)
+                </li>
+                <li>
+                    <code>.texto { color: red; }</code> (10 pontos)
+                </li>
+                <li>
+                    <code>#titulo { color: green; }</code> (100 pontos)
+                </li>
+            </ul>
+            Se um elemento tiver o ID <code>titulo</code> e a classe <code>texto</code>, ele será <code>verde</code>, porque o ID tem mais "peso" (100 vs 10).
+        </article>
+        <article>
+            <h2>Agrupamento e Encadeamento</h2>
+            <p>Para manter seu código limpo, você pode:</p>
+            <ul>
+                <li>
+                    <strong>Agrupar</strong>: <code>h1, h2, p { font-family: sans-serif; }</code> (Usa a vírgula para aplicar a mesma regra a vários seletores).
+                </li>
+                <li>
+                    <strong>Encadear (Seletores de Descendente)</strong>: <code>article p { color: gray; }</code> (Seleciona apenas os parágrafos que estão <strong>dentro</strong> de um article).
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <a href="">GitHub</a> <a href="">E-mail</a> <a href="">LinkedIn</a>
+        </nav>
+        Este blog tem como objetivo principal demonstrar minhas competências em desenvolvimento web, <strong>possuindo caráter</strong> estritamente <strong>acadêmico</strong> e <strong>sem fins lucrativos</strong>.
+    </footer>
+</body>
+</html>
